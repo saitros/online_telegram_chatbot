@@ -1,6 +1,6 @@
-# Project Title
+# 한국인공지능아카데미 & SBA 아카데미 온라인 챗봇 교육자료
 
-One Paragraph of project description goes here
+Telegram Chatbot with Python Flask
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+[requirements](tuto00(Heroku)/requirements.txt)
 ```
 
 ### Installing
