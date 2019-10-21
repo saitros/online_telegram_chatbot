@@ -9,9 +9,10 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 What things you need to install the software and how to install them
+[requirements](tuto00(Heroku)/requirements.txt)
 
 ```
-[requirements](tuto00(Heroku)/requirements.txt)
+
 ```
 
 ### Installing
