@@ -18,17 +18,19 @@ Heroku CLI(Command Line Interface) 설치 [Install Heroku CLI](https://devcenter.h
 
 ## Ngrok 을 통한 간단한 테스트
 
-### Ngrok 사용
+[Ngrok 다운](https://ngrok.com/download)
 
-[Ngrok Download](https://ngrok.com/download)
-
-Ngrok
-
+Ngrok 실행화면 
+ 
 ```
 ngrok http 5000 --region ap 
 ```
+![Untitled](https://user-images.githubusercontent.com/16240290/67308446-14a5e900-f535-11e9-888d-8c660dadf411.png)
+![Untitled1](https://user-images.githubusercontent.com/16240290/67308449-15d71600-f535-11e9-8d4b-c1a375c731f9.png)
+
 
 ### Ngrok 을 이용한 테스트 
+
 
 tuto01 에 있는 telegram.py 를 수정
 ```
