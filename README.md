@@ -18,15 +18,15 @@ Heroku CLI(Command Line Interface) 설치 [Install Heroku CLI](https://devcenter.h
 
 ## Ngrok 을 통한 간단한 테스트
 
-[Ngrok 다운](https://ngrok.com/download)
-
-Ngrok 실행화면 
+Ngrok 실행화면 [Ngrok 다운](https://ngrok.com/download)
  
 ```
 ngrok http 5000 --region ap 
 ```
-![Untitled](https://user-images.githubusercontent.com/16240290/67308446-14a5e900-f535-11e9-888d-8c660dadf411.png)
-![Untitled1](https://user-images.githubusercontent.com/16240290/67308449-15d71600-f535-11e9-8d4b-c1a375c731f9.png)
+<div>
+<img width="200" src="https://user-images.githubusercontent.com/16240290/67308446-14a5e900-f535-11e9-888d-8c660dadf411.png">
+<img width="200" src="https://user-images.githubusercontent.com/16240290/67308449-15d71600-f535-11e9-8d4b-c1a375c731f9.png">
+</div>
 
 
 ### Ngrok 을 이용한 테스트 
@@ -51,14 +51,15 @@ app.py 실행 로그
 
 ## 배포
 
-배포과정에서는 
+
 [![Deploy my app to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Telegram](https://telegram.org) - Message Platform
+* [Flask](https://github.com/pallets/flask) - The web framework used
+* [Heroku](https://dashboard.heroku.com/apps) - Deploy Management
+* [ngrok](https://ngrok.com/) - Deploy Test
 
 ## Contributing
 
@@ -70,9 +71,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **LeeJunho** - *Initial work* - [Panic](https://github.com/saitros)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
