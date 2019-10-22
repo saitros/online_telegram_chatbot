@@ -1,25 +1,20 @@
 # 한국인공지능아카데미 & SBA 아카데미 온라인 챗봇 교육자료
 
-Telegram Chatbot with Python Flask
+Telegram Chatbot Tutorial with Python Flask
 
-## Getting Started
+## 시작하기
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+교육영상 : 동영상 URL 을 참고하시면 됩니다.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
 [requirements](tuto00(Heroku)/requirements.txt)
 
-```
-
-```
-
 ### Installing
+[Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
-A step by step series of examples that tell you how to get a development env running
+ 만약 Git이 설치 되어있지 않다면 [Install Git](https://git-scm.com/downloads)
 
-Say what the step will be
 
 ```
 Give the example
@@ -55,7 +50,7 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+[![Deploy my app to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Built With
 
