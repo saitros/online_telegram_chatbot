@@ -1,57 +1,58 @@
-# ÇÑ±¹ÀÎ°øÁö´É¾ÆÄ«µ¥¹Ì & SBA ¾ÆÄ«µ¥¹Ì ¿Â¶óÀÎ Ãªº¿ ±³À°ÀÚ·á
+# í•œêµ­ì¸ê³µì§€ëŠ¥ì•„ì¹´ë°ë¯¸ & SBA ì•„ì¹´ë°ë¯¸ ì˜¨ë¼ì¸ ì±—ë´‡ êµìœ¡ìë£Œ
 
 Telegram Chatbot Tutorial with Python Flask
 
-## ½ÃÀÛÇÏ±â
+## ì‹œì‘í•˜ê¸°
 
-±³À°¿µ»ó : µ¿¿µ»ó URL À» Âü°íÇÏ½Ã¸é µË´Ï´Ù.
+êµìœ¡ì˜ìƒ : ë™ì˜ìƒ URL ì„ ì°¸ê³ í•˜ì‹œë©´ ë©ë‹ˆë‹¤.
 
-### ÆÄÀÌ½ã ÆĞÅ°Áö ¸í¼¼
+### íŒŒì´ì¬ íŒ¨í‚¤ì§€ ëª…ì„¸
 
 [requirements](tuto00(Heroku)/requirements.txt)
 
-### ¼³Ä¡
-Heroku CLI(Command Line Interface) ¼³Ä¡ [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+### ì„¤ì¹˜
+Heroku CLI(Command Line Interface) ì„¤ì¹˜ [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
- ¸¸¾à GitÀÌ ¼³Ä¡ µÇ¾îÀÖÁö ¾Ê´Ù¸é [Install Git](https://git-scm.com/downloads)
+ ë§Œì•½ Gitì´ ì„¤ì¹˜ ë˜ì–´ìˆì§€ ì•Šë‹¤ë©´ [Install Git](https://git-scm.com/downloads)
 
 
-## Ngrok À» ÅëÇÑ °£´ÜÇÑ Å×½ºÆ®
+## Ngrok ì„ í†µí•œ ê°„ë‹¨í•œ í…ŒìŠ¤íŠ¸
 
-[Ngrok ´Ù¿î](https://ngrok.com/download)
+[Ngrok ë‹¤ìš´](https://ngrok.com/download)
 
-Ngrok ½ÇÇàÈ­¸é 
+Ngrok ì‹¤í–‰í™”ë©´ 
  
 ```
 ngrok http 5000 --region ap 
 ```
+<div>
 ![Untitled](https://user-images.githubusercontent.com/16240290/67308446-14a5e900-f535-11e9-888d-8c660dadf411.png)
 ![Untitled1](https://user-images.githubusercontent.com/16240290/67308449-15d71600-f535-11e9-8d4b-c1a375c731f9.png)
+</div>
+
+### Ngrok ì„ ì´ìš©í•œ í…ŒìŠ¤íŠ¸ 
 
 
-### Ngrok À» ÀÌ¿ëÇÑ Å×½ºÆ® 
-
-
-tuto01 ¿¡ ÀÖ´Â telegram.py ¸¦ ¼öÁ¤
+tuto01 ì— ìˆëŠ” telegram.py ë¥¼ ìˆ˜ì •
 ```
 API_KEY = Telegram Bot ACCESS Key
 WEBHOOK URL = Ngrok forwarding HTTPS URL
 ```
 
-½ÇÇàÇÒ ÆÄÀÏ tuto02~05¿¡ ÀÖ´Â app.py ½ÇÇà
+ì‹¤í–‰í•  íŒŒì¼ tuto02~05ì— ìˆëŠ” app.py ì‹¤í–‰
 ```
 python app.py
 ```
 
-app.py ½ÇÇà ·Î±×
+app.py ì‹¤í–‰ ë¡œê·¸
 
 ```
  Running on http://127.0.0.1:5000/
 ```
 
-## ¹èÆ÷
+## ë°°í¬
 
-¹èÆ÷°úÁ¤¿¡¼­´Â 
+ë°°í¬ê³¼ì •ì—ì„œëŠ” 
 [![Deploy my app to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Built With
