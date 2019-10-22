@@ -51,8 +51,21 @@ app.py 실행 로그
 
 ## 배포
 
-
 [![Deploy my app to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+
+```
+heroku login 
+cd tuto00(Heroku)
+git init
+git add .
+heroku git:remote -a [Heroku 앱 이름]
+git add .
+git commit -m "[코맨트]"
+heroku buildpacks:set heroku/python
+git push heroku master
+heroku ps:scale web=1
+```
 
 ## Built With
 
@@ -61,13 +74,6 @@ app.py 실행 로그
 * [Heroku](https://dashboard.heroku.com/apps) - Deploy Management
 * [ngrok](https://ngrok.com/) - Deploy Test
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
@@ -78,8 +84,3 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc

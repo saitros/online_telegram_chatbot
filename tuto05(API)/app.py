@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import requests
+import os
 from flask import Flask, request, Response
 from kobis_api import movie_actor_search
 
@@ -39,8 +40,8 @@ def send_message(chat_id, msg):
 
     if msg[:3] == '무비봇':
         movie_name, top5_actor = movie_actor_search(msg[3:])
-        msg = "너가 찾은 영화 [{movie_Nm}]의 메인배우 5명은 {actor_name}이야!".format(movie_Nm=movie_name,
-                                                                     actor_name=', '.join(top5_actor))
+        msg = "너가 찾은 영화 [{movie_Nm}]의 메인배우 5명은 {actor_name}이야!".\
+            format(movie_Nm=movie_name, actor_name=', '.join(top5_actor))
 
     # 변수들을 딕셔너리 형식으로 묶음
     # 사용자에게 보내는 text는 사용자가 보낸 text와 똑같다
@@ -75,9 +76,10 @@ def index():
 
 @app.route('/about')
 def about():
-  return 'About page'
+    return 'About page'
 
 
 if __name__ == '__main__':
-    app.run(port = 5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
 

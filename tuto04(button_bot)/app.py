@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import json
+import os
 import requests
 from flask import Flask, request, Response
 
@@ -23,9 +23,10 @@ def send_message(chat_id, text='bla-bla-bla'):
     
     https://core.telegram.org/bots/api#keyboardbutton
     """
-    url = 'https://api.telegram.org/bot{token}/sendMessage'.format(token=API_KEY)   #sendMessage
+    # sendMessage URL
+    url = 'https://api.telegram.org/bot{token}/sendMessage'.format(token=API_KEY)
     keyboard = {                                        # Keyboard 형식
-            'keyboard':[[{
+            'keyboard': [[{
                     'text': '버튼1'
                         },
                     {'text': '버튼2'
@@ -33,36 +34,34 @@ def send_message(chat_id, text='bla-bla-bla'):
                 [{'text': '버튼3'},
                  {'text': '버튼4'}]
                     ],
-            'one_time_keyboard' : True
+            'one_time_keyboard': True
             }
         
-    if text=='버튼1':                            # 사용자가 button_1 이라고 응답하면 ~
+    if text == '버튼1':                            # 사용자가 button_1 이라고 응답하면 ~
         keyboard = {
             'keyboard':[[{'text': '버튼1을 누르셨습니다.'}]],
             'one_time_keyboard' : True
             }
-        params = {'chat_id':chat_id, 'text': text, 'reply_markup' : keyboard}
+        params = {'chat_id':chat_id, 'text': text, 'reply_markup': keyboard}
         requests.post(url, json=params)
         return 0 
     
     # 변수들을 딕셔너리 형식으로 묶음
-    params = {'chat_id':chat_id, 'text': text, 'reply_markup' : keyboard}
+    params = {'chat_id': chat_id, 'text': text, 'reply_markup': keyboard}
     
     # Url 에 params 를 json 형식으로 변환하여 전송
     # 메세지를 전송하는 부분
-    response = requests.post(url, json=params)
+    requests.post(url, json=params)
     
     return 0
-    
+
+
 # 경로 설정, URL 설정
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
         message = request.get_json()
-        
-        with open('response.json', 'w', encoding='UTF-8') as f:
-            json.dump(message, f, indent=4, ensure_ascii=False)
-                     
+
         chat_id, msg = parse_message(message)
         send_message(chat_id, msg)
         
@@ -74,4 +73,5 @@ def index():
 # Python 에서는 실행시킬때 __name__ 이라는 변수에
 # __main__ 이라는 값이 할당
 if __name__ == '__main__':
-    app.run(port = 5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
