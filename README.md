@@ -6,50 +6,50 @@ Telegram Chatbot Tutorial with Python Flask
 
 교육영상 : 동영상 URL 을 참고하시면 됩니다.
 
-### Prerequisites
+### 파이썬 패키지 명세
 
 [requirements](tuto00(Heroku)/requirements.txt)
 
-### Installing
-[Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+### 설치
+Heroku CLI(Command Line Interface) 설치 [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
  만약 Git이 설치 되어있지 않다면 [Install Git](https://git-scm.com/downloads)
 
 
-```
-Give the example
-```
+## Ngrok 을 통한 간단한 테스트
 
-And repeat
+### Ngrok 사용
 
-```
-until finished
-```
+[Ngrok Download](https://ngrok.com/download)
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Ngrok
 
 ```
-Give an example
+ngrok http 5000 --region ap 
 ```
 
-### And coding style tests
+### Ngrok 을 이용한 테스트 
 
-Explain what these tests test and why
+tuto01 에 있는 telegram.py 를 수정
+```
+API_KEY = Telegram Bot ACCESS Key
+WEBHOOK URL = Ngrok forwarding HTTPS URL
+```
+
+실행할 파일 tuto02~05에 있는 app.py 실행
+```
+python app.py
+```
+
+app.py 실행 로그
 
 ```
-Give an example
+ Running on http://127.0.0.1:5000/
 ```
 
-## Deployment
+## 배포
 
+배포과정에서는 
 [![Deploy my app to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Built With
