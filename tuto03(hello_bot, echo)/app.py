@@ -18,20 +18,18 @@ def parse_message(message):
     chat_id = 사용자 아이디 코드
     msg = 사용자 대화 내용    
     """
-    chat_id = message['message']['chat']['id']
+    chat_id = message['message']['from']['id']
     msg = message['message']['text']
     
     return chat_id, msg
 
 
-def send_message(chat_id, text='hello'):
+def send_message(chat_id, text):
     """
     chat_id : 사용자 아이디 코드
     text : 사용자 대화내용
 
     Return :
-    함수에 변수를 할당할때 text='hello' 라고 선언
-    --> text에 관련된 값이 전달되지 않으면 hello를 default로 사용
     
     사용자에게 메세지를 보내는 내용의 함수   
     """
