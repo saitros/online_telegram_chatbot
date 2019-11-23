@@ -1,24 +1,26 @@
-# ÇÑ±¹ÀÎ°øÁö´É¾ÆÄ«µ¥¹Ì & SBA ¾ÆÄ«µ¥¹Ì ¿Â¶óÀÎ Ãªº¿ ±³À°ÀÚ·á
+# í•œêµ­ì¸ê³µì§€ëŠ¥ì•„ì¹´ë°ë¯¸ & SBA ì•„ì¹´ë°ë¯¸ ì˜¨ë¼ì¸ ì±—ë´‡ êµìœ¡ìë£Œ
 
 Telegram Chatbot Tutorial with Python Flask
 
-## ½ÃÀÛÇÏ±â
+## ì‹œì‘í•˜ê¸°
 
-±³À°¿µ»ó : µ¿¿µ»ó URL À» Âü°íÇÏ½Ã¸é µË´Ï´Ù.
+êµìœ¡ì˜ìƒ : ë™ì˜ìƒ URL ì„ ì°¸ê³ í•˜ì‹œë©´ ë©ë‹ˆë‹¤.
+Google Firebase : 
 
-### ÆÄÀÌ½ã ÆĞÅ°Áö ¸í¼¼
+
+### íŒŒì´ì¬ íŒ¨í‚¤ì§€ ëª…ì„¸
 
 [requirements](tuto00(Heroku)/requirements.txt)
 
-### ¼³Ä¡
-Heroku CLI(Command Line Interface) ¼³Ä¡ [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+### ì„¤ì¹˜
+Heroku CLI(Command Line Interface) ì„¤ì¹˜ [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
- ¸¸¾à GitÀÌ ¼³Ä¡ µÇ¾îÀÖÁö ¾Ê´Ù¸é [Install Git](https://git-scm.com/downloads)
+ ë§Œì•½ Gitì´ ì„¤ì¹˜ ë˜ì–´ìˆì§€ ì•Šë‹¤ë©´ [Install Git](https://git-scm.com/downloads)
 
 
-## Ngrok À» ÅëÇÑ °£´ÜÇÑ Å×½ºÆ®
+## Ngrok ì„ í†µí•œ ê°„ë‹¨í•œ í…ŒìŠ¤íŠ¸
 
-Ngrok ½ÇÇàÈ­¸é [Ngrok ´Ù¿î](https://ngrok.com/download)
+Ngrok ì‹¤í–‰í™”ë©´ [Ngrok ë‹¤ìš´](https://ngrok.com/download)
  
 ```
 ngrok http 5000 --region ap 
@@ -29,27 +31,27 @@ ngrok http 5000 --region ap
 </div>
 
 
-### Ngrok À» ÀÌ¿ëÇÑ Å×½ºÆ® 
+### Ngrok ì„ ì´ìš©í•œ í…ŒìŠ¤íŠ¸ 
 
 
-tuto01 ¿¡ ÀÖ´Â telegram.py ¸¦ ¼öÁ¤
+tuto01 ì— ìˆëŠ” telegram.py ë¥¼ ìˆ˜ì •
 ```
 API_KEY = Telegram Bot ACCESS Key
 WEBHOOK URL = Ngrok forwarding HTTPS URL
 ```
 
-½ÇÇàÇÒ ÆÄÀÏ tuto02~05¿¡ ÀÖ´Â app.py ½ÇÇà
+ì‹¤í–‰í•  íŒŒì¼ tuto02~05ì— ìˆëŠ” app.py ì‹¤í–‰
 ```
 python app.py
 ```
 
-app.py ½ÇÇà ·Î±×
+app.py ì‹¤í–‰ ë¡œê·¸
 
 ```
  Running on http://127.0.0.1:5000/
 ```
 
-## ¹èÆ÷
+## ë°°í¬
 
 [![Deploy my app to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
@@ -59,9 +61,9 @@ heroku login
 cd tuto00(Heroku)
 git init
 git add .
-heroku git:remote -a [Heroku ¾Û ÀÌ¸§]
+heroku git:remote -a [Heroku ì•± ì´ë¦„]
 git add .
-git commit -m "[ÄÚ¸ÇÆ®]"
+git commit -m "[ì½”ë§¨íŠ¸]"
 heroku buildpacks:set heroku/python
 git push heroku master
 heroku ps:scale web=1
