@@ -5,7 +5,9 @@ Telegram Chatbot Tutorial with Python Flask
 ## 시작하기
 
 교육영상 : 동영상 URL 을 참고하시면 됩니다.
-Google Firebase : 
+
+Google Firebase Document : https://firebase.google.com/docs/reference/admin/python
+
 
 
 ### 파이썬 패키지 명세
