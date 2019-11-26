@@ -57,18 +57,19 @@ app.py 실행 로그
 
 [![Deploy my app to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+Heroku CLI에서 사용 [ 내용은 해당 내용을  ] 
 
 ```
-heroku login 
-cd tuto00(Heroku)
-git init
-git add .
-heroku git:remote -a [Heroku 앱 이름]
-git add .
-git commit -m "[코맨트]"
-heroku buildpacks:set heroku/python
-git push heroku master
-heroku ps:scale web=1
+>> heroku login 
+>> cd tuto00(Heroku)
+>> git init
+>> git add .
+>> heroku git:remote -a [Heroku 저장소 이름]
+>> git add .
+>> git commit -m "[코맨트]"
+>> heroku buildpacks:set heroku/python
+>> git push heroku master
+>> heroku ps:scale web=1
 ```
 
 ## Built With
