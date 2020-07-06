@@ -8,7 +8,7 @@ import json
 
 # 발급 받은 API_KEY
 # 해당 정보를 가지고 오는 End-point URL
-API_KEY = "9d96438b2c16bfc53d5f1e1b519b4f49"
+API_KEY = "KOBIS_API_KEY"
 code_search_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json"
 movie_info_search_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json"
 
