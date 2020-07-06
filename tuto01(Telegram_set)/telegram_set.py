@@ -2,8 +2,8 @@ from urllib.request import Request, urlopen
 
 ## https://core.telegram.org/bots/api#getupdates
 
-API_KEY = '1045415771:AAFdcyQ9WsZntkvZ6Jv3ycQVizrLBzx-rhs'
-WEBHOOK_URL = 'https://0de55179.ap.ngrok.io'
+API_KEY = 'API_KEY'
+WEBHOOK_URL = 'WEBHOOK_URL'
 BOT_INFO_URL = 'https://api.telegram.org/bot{API_KEY}/getMe'.format(API_KEY=API_KEY)
 BOT_UPDATE_URL = 'https://api.telegram.org/bot{API_KEY}/Update'.format(API_KEY=API_KEY)
 BOT_SET_WEBHOOK_URL = 'https://api.telegram.org/bot{API_KEY}/setWebhook?url={WEBHOOK_URL}'\
