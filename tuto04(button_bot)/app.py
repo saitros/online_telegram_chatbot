@@ -4,7 +4,7 @@ import os
 import requests
 from flask import Flask, request, Response
 
-API_KEY = 'API_KEY'
+API_KEY = '1045415771:AAFdcyQ9WsZntkvZ6Jv3ycQVizrLBzx-rhs'
 
 app = Flask(__name__)
 

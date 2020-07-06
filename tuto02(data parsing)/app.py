@@ -3,7 +3,6 @@ from flask import Flask, request, Response
 import json
 import os
 
-API_KEY = 'API_KEY'
 
 # Flask 객체를 생성 __name__ 을 인수로 입력
 app = Flask(__name__)

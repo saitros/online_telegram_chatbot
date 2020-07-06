@@ -3,6 +3,7 @@
 import requests
 import os
 from flask import Flask, request, Response
+from firebase_tuto import db_user_set
 
 API_KEY = '1045415771:AAFdcyQ9WsZntkvZ6Jv3ycQVizrLBzx-rhs'
 
@@ -13,15 +14,16 @@ def parse_message(message):
     """
     telegram 에서 data 인자를 받아옴
     data 내부 구조를 이해해야 한다.
-    
-    Retuen :    
+
+    Retuen :
     chat_id = 사용자 아이디 코드
-    msg = 사용자 대화 내용    
+    msg = 사용자 대화 내용
     """
     chat_id = message['message']['from']['id']
     msg = message['message']['text']
-    
-    return chat_id, msg
+    name = message['message']['from']['last_name'] + message['message']['from']['first_name']
+
+    return chat_id, msg, name
 
 
 def send_message(chat_id, text):
@@ -31,14 +33,14 @@ def send_message(chat_id, text):
 
     Return :
 
-    사용자에게 메세지를 보내는 내용의 함수   
+    사용자에게 메세지를 보내는 내용의 함수
     """
     url = 'https://api.telegram.org/bot{token}/sendMessage'.format(token=API_KEY)
     # 변수들을 딕셔너리 형식으로 묶음
     # 사용자에게 보내는 text는 사용자가 보낸 text와 똑같다
     # 똑같은 소리를 한다고 해서 Echo_bot
     params = {'chat_id': chat_id, 'text': text}
-    
+
     # Url 에 params 를 json 형식으로 변환하여 전송
     # 메세지를 전송하는 부분
     response = requests.post(url, json=params)
@@ -51,14 +53,15 @@ def send_message(chat_id, text):
 def index():
     if request.method == 'POST':
         message = request.get_json()
-                
+
         # parse_message 함수는 두가지 return 값을 가진다 (chat_id, msg)
         # 순서대로 chat_id, msg의 변수로 받아준다.
-        chat_id, msg = parse_message(message)
-        
+        chat_id, msg, name = parse_message(message)
+
+        msg = db_user_set(chat_id, name, msg)
         # send_message 함수에 두가지 변수를 전달
         send_message(chat_id, msg)
-        
+
         # 여기까지 오류가 없으면 서버상태 200 으로 반응
         return Response('ok', status=200)
     else:

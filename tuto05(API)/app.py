@@ -5,7 +5,7 @@ import os
 from flask import Flask, request, Response
 from kobis_api import movie_actor_search
 
-API_KEY = 'API_KEY'
+API_KEY = '1045415771:AAFdcyQ9WsZntkvZ6Jv3ycQVizrLBzx-rhs'
 
 app = Flask(__name__)
 
@@ -39,9 +39,13 @@ def send_message(chat_id, msg):
     url = 'https://api.telegram.org/bot{token}/sendMessage'.format(token=API_KEY)
 
     if msg[:3] == '무비봇':
-        movie_name, top5_actor = movie_actor_search(msg[3:])
-        msg = "너가 찾은 영화 [{movie_Nm}]의 메인배우 5명은 {actor_name}이야!".\
-            format(movie_Nm=movie_name, actor_name=', '.join(top5_actor))
+        try:
+            movie_name, top5_actor = movie_actor_search(msg[3:])
+            msg = "너가 찾은 영화 [{movie_Nm}]의 메인배우 5명은 {actor_name}이야!". \
+                format(movie_Nm=movie_name, actor_name=', '.join(top5_actor))
+        except ValueError:
+            msg = movie_actor_search(msg[3:])
+
 
     # 변수들을 딕셔너리 형식으로 묶음
     # 사용자에게 보내는 text는 사용자가 보낸 text와 똑같다

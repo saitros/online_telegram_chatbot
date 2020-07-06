@@ -1,13 +1,13 @@
-{
-    "update_id": 108939711,
+ {
+    "update_id": 967071164,
     "message": {
-        "message_id": 244,
+        "message_id": 2,
         "from": {
             "id": 727895200,
             "is_bot": false,
             "first_name": "이",
             "last_name": "준호",
-            "language_code": "ko"
+            "language_code": "en"
         },
         "chat": {
             "id": 727895200,
@@ -15,7 +15,7 @@
             "last_name": "준호",
             "type": "private"
         },
-        "date": 1567495291,
-        "text": "안녕"
+        "date": 1571949983,
+        "text": "만나서 반가워"
     }
 }
