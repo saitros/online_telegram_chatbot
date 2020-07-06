@@ -30,7 +30,11 @@ def send_message(chat_id, text):
     text : 사용자 대화내용
 
     Return :
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> refs/remotes/origion/master
     사용자에게 메세지를 보내는 내용의 함수   
     """
     url = 'https://api.telegram.org/bot{token}/sendMessage'.format(token=API_KEY)
