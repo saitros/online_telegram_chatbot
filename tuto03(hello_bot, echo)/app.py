@@ -4,7 +4,7 @@ import requests
 import os
 from flask import Flask, request, Response
 
-API_KEY = '1045415771:AAFdcyQ9WsZntkvZ6Jv3ycQVizrLBzx-rhs'
+API_KEY = 'API_KEY'
 
 app = Flask(__name__)
 
@@ -30,11 +30,6 @@ def send_message(chat_id, text):
     text : 사용자 대화내용
 
     Return :
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> refs/remotes/origion/master
     사용자에게 메세지를 보내는 내용의 함수   
     """
     url = 'https://api.telegram.org/bot{token}/sendMessage'.format(token=API_KEY)
