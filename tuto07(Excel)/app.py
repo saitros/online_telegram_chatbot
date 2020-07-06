@@ -5,7 +5,7 @@ import os
 from flask import Flask, request, Response
 from openpyxl_tuto import db_user_set
 
-API_KEY = '1045415771:AAFdcyQ9WsZntkvZ6Jv3ycQVizrLBzx-rhs'
+API_KEY = 'API_KEY'
 
 app = Flask(__name__)
 
