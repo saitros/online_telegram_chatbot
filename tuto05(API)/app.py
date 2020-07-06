@@ -5,7 +5,7 @@ import os
 from flask import Flask, request, Response
 from kobis_api import movie_actor_search
 
-API_KEY = '1045415771:AAFdcyQ9WsZntkvZ6Jv3ycQVizrLBzx-rhs'
+API_KEY = 'TELEGRAM_API_KEY'
 
 app = Flask(__name__)
 
